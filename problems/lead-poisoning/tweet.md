@@ -1,0 +1,1 @@
+Indonesia banned unlicensed lead battery smelting years ago. Today: ~5 licensed smelters, 200+ illegal ones, and 47% of young children near Jakarta's recyclers with elevated blood lead. The missing piece is not a law. It is a $150-350k enforcement map. https://github.com/Monte9/stuck-problems-agent/blob/main/problems/lead-poisoning/blog.md

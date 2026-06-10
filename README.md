@@ -27,4 +27,4 @@ Everything else runs without you. Watch the commit log: `[blocked]` needs you, `
 
 | Problem | Status | Result |
 |---------|--------|--------|
-| [lead-poisoning](problems/lead-poisoning/) | in progress | — |
+| [lead-poisoning](problems/lead-poisoning/) | published | Indonesia's top-ranked target already bans informal battery smelting, yet ~5 licensed smelters coexist with 200+ illegal ones and 47% of children near Jakarta recyclers have elevated blood lead; the missing piece is a $150-350k enforcement map. [blog](problems/lead-poisoning/blog.md) · [final artifact](problems/lead-poisoning/artifacts/2026-06-10-m5-funder-brief.md) |

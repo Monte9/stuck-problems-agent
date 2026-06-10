@@ -1,15 +1,16 @@
 # State: lead-poisoning
 
-status: complete
+status: published
 current_milestone: 5
 attempt: 0
 
 ## Next action
 
-All five milestones passed; M5 was the last. Per decision table row 4, the next run invokes the publisher to write `blog.md` and `tweet.md` in this problem directory, add the problem to the README's Problems table, and set status to `published`.
+Problem is published; nothing left to do here. Monte reviews `blog.md` and `tweet.md` and posts them. With no active problem remaining, the next run matches decision table row 5: the scout sources a fresh stuck problem.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-10 — publisher ran: wrote blog.md (~1,200 words) and tweet.md, updated the README Problems table row to published with the Indonesia enforcement-gap headline (~5 licensed vs 200+ illegal smelters, 47% of children near Jakarta recyclers with elevated blood lead, $150-350k contamination map as the ask); all figures verified against M1–M5 artifacts; status set to published; Monte DMed on Slack.
 - 2026-06-10 — evaluator ran on M5: PASS verdict written to verdicts/2026-06-10-m5-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked 3/3 citations — GiveWell RMS $36,800/country, Bangladesh turmeric 47%→0% at ~$1/DALY, LEAF $20M/$104M — all support their claims; body word count within the 1,600 cap). M5 was the final milestone, so status set to complete; publisher runs next.
 - 2026-06-10 — generator ran on M5: wrote artifacts/2026-06-10-m5-funder-brief.md (one-page case + 4 fundable line items: Indonesia ULAB contamination-plus-blood map, formal-sector off-ramp pilot, Egypt+Philippines product screening with child-BLL baselines, optional DRC scoping bet; cost anchors cited to Pure Earth RMS ~$36.8k/country, Bhutan survey ~$215k, LEAF $20M/$104M, Bangladesh ~$1/DALY, LEEP ~$1.66/child; body 1,553 words, under the 1,600 cap); status set to awaiting_review. Generator note: public data gives cost-effectiveness ratios everywhere but almost no line-item program budgets, so the RMS per-country figure carries most of the anchoring (flagged in limitations); also LEAF has $104M committed through 2027 and Pure Earth won Audacious funding in Feb 2026, so the marginal-dollar whitespace is even thinner than M2 warned.
 - 2026-06-10 — evaluator ran on M4: PASS verdict written to verdicts/2026-06-10-m4-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked Suprapto/Prihartono 2019 Jakarta BLL figures and Forsyth 2023 Bangladesh turmeric 47%→0% result; confirmed PP 22/2021 supersedes PP 101/2014). Non-blocking nuance noted: Suprapto found no significant BLL difference near vs. far from ULAB sites, so "source-attributable" reads slightly stronger than the study's framing — the artifact discloses this itself in §2/§8.1. Advanced cursor to M5, reset attempt to 0, status set to in_progress.
