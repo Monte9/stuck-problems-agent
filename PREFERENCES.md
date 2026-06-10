@@ -2,28 +2,44 @@
 
 The scout scores every candidate slate against this file. This is the operator's taste, encoded. When a pick misses, the fix goes here, not into a review step.
 
-<!-- DRAFT seeded from one accept (lead poisoning) and one reject (zombie trials). Monte: edit freely; the scout reads whatever is here on its next run. -->
+## The anchor
 
-## What excites me
+Every problem must cash out in quality of human life: health, cognition, income, lived conditions. If the findings would improve nothing a person feels, it fails regardless of how interesting it is.
 
-- Direct, measurable human harm at scale: deaths, IQ, income, sickness. Numbers a stranger feels.
-- The fix is already proven somewhere, cheap, and concrete ($1/DALY-style precedents). The gap is grind, not invention.
+## The shape of a good problem
+
+Shape decides the winner; category only provides variety. Score candidates on:
+
+- Quantified human cost at scale. Numbers a stranger feels.
+- The fix is proven somewhere and cheap ($1/DALY-class precedent). The gap is grind, not invention.
 - A named actor (regulator, funder, agency) could act within a year if handed the right document.
-- A clear desk-research wedge: the agent can produce the missing artifact itself, not merely recommend that others do research.
+- A clear desk-research wedge: the agent can produce the missing artifact itself, not recommend that others do research.
+- A historical analogue: the solution is overdue by the standard of past diffusions (scurvy, Semmelweis, H. pylori pattern).
+- A dramatic inversion likely waiting inside: the finding that flips the naive expectation makes the report and the tweet.
 
-## What bores me
+## What bores me / hard filters
 
-- Meta-problems and process problems: research about research, "the evidence base is broken", coordination-of-coordinators. The deliverable ends up being a report about reports.
+- Meta-problems and process problems: research about research, coordination of coordinators. The deliverable becomes a report about reports. (Empirical: zombie trials, rejected.)
 - Problems whose honest conclusion is "this needs a decade of institutional reform". Nothing for the next dollar to buy.
-- Anything already saturated with well-funded attention where the marginal contribution is commentary.
+- Saturated topics where the marginal contribution is commentary.
+- Hard filters (binary): quantifiable stakes with published data to synthesize; plausibly completable in 4-6 desk-research milestones; one problem at a time.
 
-## Hard filters
+## Category roster and rotation
 
-- Must have quantifiable stakes and at least some published data to synthesize.
-- Must plausibly complete in 4-6 desk-research milestones.
-- One problem at a time; depth beats breadth.
+We are in a sampling phase: cover each category once before repeating any. The scout checks `problems/` for categories already covered (dropped ones count as covered) and builds its slate from uncovered categories. Shape picks the winner.
 
-## Tie-breakers
+1. Global health and disease (covered: lead-poisoning)
+2. Economics and inequality
+3. Energy and climate
+4. Cities, housing, and infrastructure
+5. Education and human capital
+6. Food and agriculture
+7. Technology and society: AI, internet, the future of work
+8. Frontier expansion: space and oceans
+9. Civilizational resilience: pandemics, grids, preparedness
+10. Demography: aging, fertility, migration
+11. Institutional failure and state capacity (apply the meta-problem filter with extra scrutiny here: needs a concrete buyable wedge)
+12. Longevity and aging biology
+13. Mental health and loneliness
 
-- Prefer a domain different from the last two problems.
-- Prefer the candidate with the most surprising finding likely waiting inside it.
+After one full lap, the operator re-ranks this roster from evidence: which reports were worth tweeting, which were dropped. P0/P1 tiers replace the flat rotation then.
