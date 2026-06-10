@@ -1,15 +1,16 @@
 # State: lead-poisoning
 
-status: in_progress
+status: awaiting_review
 current_milestone: 5
 attempt: 0
 
 ## Next action
 
-M4 passed. Per decision table row 2, the next run invokes the generator on M5 (funder-facing action brief), writing `artifacts/<run-date>-m5-funder-brief.md`. M5 is the final milestone; after its PASS the problem goes to `complete`.
+Generator wrote the M5 funder brief. Per decision table row 3, the next run invokes the evaluator on `artifacts/2026-06-10-m5-funder-brief.md` against M5's done-criteria, writing `verdicts/<run-date>-m5-attempt0.md`. M5 is the final milestone; a PASS sets status to `complete`.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-10 — generator ran on M5: wrote artifacts/2026-06-10-m5-funder-brief.md (one-page case + 4 fundable line items: Indonesia ULAB contamination-plus-blood map, formal-sector off-ramp pilot, Egypt+Philippines product screening with child-BLL baselines, optional DRC scoping bet; cost anchors cited to Pure Earth RMS ~$36.8k/country, Bhutan survey ~$215k, LEAF $20M/$104M, Bangladesh ~$1/DALY, LEEP ~$1.66/child; body 1,553 words, under the 1,600 cap); status set to awaiting_review. Generator note: public data gives cost-effectiveness ratios everywhere but almost no line-item program budgets, so the RMS per-country figure carries most of the anchoring (flagged in limitations); also LEAF has $104M committed through 2027 and Pure Earth won Audacious funding in Feb 2026, so the marginal-dollar whitespace is even thinner than M2 warned.
 - 2026-06-10 — evaluator ran on M4: PASS verdict written to verdicts/2026-06-10-m4-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked Suprapto/Prihartono 2019 Jakarta BLL figures and Forsyth 2023 Bangladesh turmeric 47%→0% result; confirmed PP 22/2021 supersedes PP 101/2014). Non-blocking nuance noted: Suprapto found no significant BLL difference near vs. far from ULAB sites, so "source-attributable" reads slightly stronger than the study's framing — the artifact discloses this itself in §2/§8.1. Advanced cursor to M5, reset attempt to 0, status set to in_progress.
 - 2026-06-10 — generator ran on M4: wrote artifacts/2026-06-10-m4-evidence-dossier.md (Indonesia × informal ULAB recycling; KLHK named as responsible agency with PP 22/2021 / MoEF Reg. 6/2021 / Reg. 9/2024 cited; 6-step intervention sequence mapped to Bangladesh analogs; 6 country-specific risks); status set to awaiting_review. Generator note: Indonesia inverts the Bangladesh case — the prohibition already exists but KLHK has publicly declined to enforce it because smelting is a livelihood, so the playbook was reordered to insert a formal-sector off-ramp (step 4) before enforcement (step 5), the dossier's biggest deliberate departure.
 - 2026-06-10 — evaluator ran on M3: PASS verdict written to verdicts/2026-06-10-m3-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked Jakarta 47%/9% BLL figure vs Suprapto 2019 and Philippines 33% cosmetics figure vs Pure Earth 2024 briefer; the decade-old Cairo pottery study was judged acceptably flagged as old rather than presented as current). Advanced cursor to M4, reset attempt to 0, status set to in_progress.
