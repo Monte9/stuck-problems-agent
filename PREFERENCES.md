@@ -20,6 +20,7 @@ Shape decides the winner; category only provides variety. Score candidates on:
 ## What bores me / hard filters
 
 - Meta-problems and process problems: research about research, coordination of coordinators. The deliverable becomes a report about reports. (Empirical: zombie trials, rejected.)
+- Worthy-but-unglamorous civic systems: housing, education systems, food systems, institutional reform, preparedness. Important, not mine. (Empirical: operator cut these categories from the roster, 2026-06-10.)
 - Problems whose honest conclusion is "this needs a decade of institutional reform". Nothing for the next dollar to buy.
 - Saturated topics where the marginal contribution is commentary.
 - Hard filters (binary): quantifiable stakes with published data to synthesize; plausibly completable in 4-6 desk-research milestones; one problem at a time.
@@ -31,15 +32,9 @@ We are in a sampling phase: cover each category once before repeating any. The s
 1. Global health and disease (covered: lead-poisoning)
 2. Economics and inequality
 3. Energy and climate
-4. Cities, housing, and infrastructure
-5. Education and human capital
-6. Food and agriculture
-7. Technology and society: AI, internet, the future of work
-8. Frontier expansion: space and oceans
-9. Civilizational resilience: pandemics, grids, preparedness
-10. Demography: aging, fertility, migration
-11. Institutional failure and state capacity (apply the meta-problem filter with extra scrutiny here: needs a concrete buyable wedge)
-12. Longevity and aging biology
-13. Mental health and loneliness
+4. Technology and society: AI, internet, the future of work
+5. Frontier expansion: space and oceans
+6. Demography: aging, fertility, migration
+7. Mental health and loneliness
 
 After one full lap, the operator re-ranks this roster from evidence: which reports were worth tweeting, which were dropped. P0/P1 tiers replace the flat rotation then.
