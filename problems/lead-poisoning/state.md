@@ -1,15 +1,16 @@
 # State: lead-poisoning
 
-status: in_progress
+status: awaiting_review
 current_milestone: 4
 attempt: 0
 
 ## Next action
 
-M3 passed. Per decision table row 2, the next run invokes the generator on M4 (regulatory evidence dossier for the #1 country), writing `artifacts/YYYY-MM-DD-m4-evidence-dossier.md`.
+M4 artifact written. Per decision table row 3, the next run invokes the evaluator on `artifacts/2026-06-10-m4-evidence-dossier.md` against the M4 done-criteria, writing `verdicts/2026-06-10-m4-attempt0.md`.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-10 — generator ran on M4: wrote artifacts/2026-06-10-m4-evidence-dossier.md (Indonesia × informal ULAB recycling; KLHK named as responsible agency with PP 22/2021 / MoEF Reg. 6/2021 / Reg. 9/2024 cited; 6-step intervention sequence mapped to Bangladesh analogs; 6 country-specific risks); status set to awaiting_review. Generator note: Indonesia inverts the Bangladesh case — the prohibition already exists but KLHK has publicly declined to enforce it because smelting is a livelihood, so the playbook was reordered to insert a formal-sector off-ramp (step 4) before enforcement (step 5), the dossier's biggest deliberate departure.
 - 2026-06-10 — evaluator ran on M3: PASS verdict written to verdicts/2026-06-10-m3-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked Jakarta 47%/9% BLL figure vs Suprapto 2019 and Philippines 33% cosmetics figure vs Pure Earth 2024 briefer; the decade-old Cairo pottery study was judged acceptably flagged as old rather than presented as current). Advanced cursor to M4, reset attempt to 0, status set to in_progress.
 - 2026-06-10 — generator ran on M3: wrote artifacts/2026-06-10-m3-source-profiles.md (6 sources graded A/B/C per country for Indonesia/Egypt/Philippines, XRF-first targets and field-must-resolve line per country); status set to awaiting_review. Generator note: evidence quality diverges sharply despite near-equal M2 ranks — Philippines has in-country product XRF (4 grade-A sources) but no child BLL survey; Indonesia is the inverse (only ULAB is grade A, consumer products lean on pooled 25-country RMS data); Egypt's primary case rests on one decade-old Cairo pottery study (43.3 µg/dL); turmeric/lead-chromate evidence is strictly South Asian, so spices graded C in all three.
 - 2026-06-10 — evaluator ran on M2: PASS verdict written to verdicts/2026-06-10-m2-attempt0.md (all base-rubric checks + all 4 done-criteria passed; independently recomputed all 10 weighted totals, reconciled all 10 countries to M1 Table B, spot-checked LEAF coverage / Indonesia IHME figures / Philippines product-survey citations). Advanced cursor to M3, reset attempt to 0, status set to in_progress.
