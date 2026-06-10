@@ -1,10 +1,16 @@
-# Problem: lead-poisoning
+# Problem: lead poisoning in low- and middle-income countries
 
-<!-- PLACEHOLDER — paste your scout brief below and delete this comment block.
-     The loop will not run the planner while the string PLACEHOLDER is present
-     in this file. A good brief answers:
-     - What is the problem and where is it stuck?
-     - Who has tried what, and why didn't it land?
-     - What would "unstuck" look like — what artifact, in whose hands?
-     - Geographic/population scope, if any.
--->
+> Intake brief from the scout routine, 2026-06-10. Source: Stuck Problems Ledger (Notion).
+> Bottleneck type: sheer grind / missing measurement, compounded by misaligned incentives and a 2025 funding collapse.
+
+**(a) The problem.** About one in three children on Earth — roughly 800 million, almost all in poor countries — carries enough lead in their blood to permanently lose IQ, attention, and earning power. The Global Burden of Disease attributes ~1.5 million deaths a year to lead (mostly adult cardiovascular); a 2023 *Lancet Planetary Health* model puts the cardiovascular toll far higher, near 5.5 million. Lead cost the world an estimated 765 million IQ points and $1.4 trillion in lost lifetime income in 2019 alone — about 1.6% of global GDP, and up to ~8% in the poorest countries. It may explain a fifth of the test-score gap between rich and poor nations. Unlike most things that kill at this scale, lead produces no outbreak, no acute ward, and no constituency.
+
+**(b) The half-known solution.** We don't need a vaccine; we need to find and switch off the sources. The catch: the dominant source differs by country — lead paint nearly everywhere, but also adulterated spices (turmeric dyed with lead chromate), informal used-car-battery recycling, lead-glazed cookware, and cosmetics. Where a source is pinned down, fixing it is shockingly cheap. In Bangladesh, a team led by Stanford's Stephen Luby and Jenna Forsyth traced a large share of exposure to turmeric, then combined media pressure, face-to-face work with mill owners, and rapid handheld (XRF) testing by the national food-safety authority. Market turmeric with detectable lead fell from 47% to 0% in two years; mill workers' blood lead dropped ~30%; cost was under $1 per DALY averted — among the best buys in all of global health.
+
+**(c) Why it's stuck.** Not theory — grind and money. The binding constraint is measurement and source attribution: only 34 of 137 low- and middle-income countries have usable blood-lead data, and knowing a child is poisoned doesn't tell you whether to go after the paint, the cookware, or the spice. Each country needs its own unglamorous fieldwork — sampling, product testing, supply-chain tracing — before a regulator can act. Global funding was roughly $15 million a year until 2024. The 2024 ramp-up went worse-then-better: the $150M USAID/UNICEF "Partnership for a Lead-Free Future" was gutted when the Trump administration dismantled USAID in early 2025, taking the public-sector match with it. Open Philanthropy's $104M Lead Exposure Action Fund survived, and LEEP says it filled its 2026 paint-program gap — so the field is alive but running on philanthropy alone, with the government multiplier gone.
+
+**(d) The AI-agent wedge.** The bottleneck is exactly the desk-research layer agents are good at. An unsupervised model could: harmonize the scattered blood-lead surveys and product-testing datasets into a country-by-country ranked list of likely sources, so field teams know where to point their XRF guns first; cross-reference trade, recall, and market-survey data to flag suspect spice and ceramic supply chains; and draft the regulatory evidence dossier — the Bangladesh playbook rebuilt, by hand, for every country — that a national food-safety agency needs to enforce. It cannot draw blood or run the testing guns; the hard constraint stays field labor and regulator will. But it can compress the synthesis that currently strands small teams.
+
+**(e) Closest to cracking it.** Pure Earth (Rich Fuller) on surveillance and source ID; Stanford's Project Unleaded (Luby, Forsyth) on the spice playbook; the Lead Exposure Elimination Project (LEEP) on paint law in ~40 countries; Open Philanthropy / Coefficient Giving funding much of it through 2027; UNICEF holding a weakened secretariat. The science is settled and the fixes are cheap. What's missing is the grind — and a buyer for it.
+
+*Sources: World Bank "A World Without Lead" & Lancet Planetary Health (2023); UNICEF/Pure Earth "Toxic Truth" (2020); Stanford GSB / ScienceDirect turmeric intervention study; LEEP 2025 review; Open Philanthropy Lead Exposure Action Fund; Center for Global Development; Devex reporting on USAID.*

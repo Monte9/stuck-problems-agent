@@ -7,8 +7,9 @@ attempt: 0
 
 ## Next action
 
-Waiting for a real brief in problem.md (still contains PLACEHOLDER). Once filled and pushed, the next run invokes the planner.
+Brief is loaded. No spec.md exists, so the next run invokes the planner (decision table row 1).
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-10 — intake: lead-poisoning brief loaded from the scout's Stuck Problems Ledger; awaiting planner.
 - 2026-06-09 — repo scaffolded; awaiting problem brief.
