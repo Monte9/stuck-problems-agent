@@ -1,15 +1,16 @@
 # State: lead-poisoning
 
-status: awaiting_review
-current_milestone: 3
+status: in_progress
+current_milestone: 4
 attempt: 0
 
 ## Next action
 
-Generator wrote `artifacts/2026-06-10-m3-source-profiles.md`. Per decision table row 3, the next run invokes the evaluator on M3 (done-criteria + artifact path + verdict path only), writing `verdicts/YYYY-MM-DD-m3-attempt0.md`.
+M3 passed. Per decision table row 2, the next run invokes the generator on M4 (regulatory evidence dossier for the #1 country), writing `artifacts/YYYY-MM-DD-m4-evidence-dossier.md`.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-10 — evaluator ran on M3: PASS verdict written to verdicts/2026-06-10-m3-attempt0.md (all base-rubric checks + all 4 done-criteria passed; spot-checked Jakarta 47%/9% BLL figure vs Suprapto 2019 and Philippines 33% cosmetics figure vs Pure Earth 2024 briefer; the decade-old Cairo pottery study was judged acceptably flagged as old rather than presented as current). Advanced cursor to M4, reset attempt to 0, status set to in_progress.
 - 2026-06-10 — generator ran on M3: wrote artifacts/2026-06-10-m3-source-profiles.md (6 sources graded A/B/C per country for Indonesia/Egypt/Philippines, XRF-first targets and field-must-resolve line per country); status set to awaiting_review. Generator note: evidence quality diverges sharply despite near-equal M2 ranks — Philippines has in-country product XRF (4 grade-A sources) but no child BLL survey; Indonesia is the inverse (only ULAB is grade A, consumer products lean on pooled 25-country RMS data); Egypt's primary case rests on one decade-old Cairo pottery study (43.3 µg/dL); turmeric/lead-chromate evidence is strictly South Asian, so spices graded C in all three.
 - 2026-06-10 — evaluator ran on M2: PASS verdict written to verdicts/2026-06-10-m2-attempt0.md (all base-rubric checks + all 4 done-criteria passed; independently recomputed all 10 weighted totals, reconciled all 10 countries to M1 Table B, spot-checked LEAF coverage / Indonesia IHME figures / Philippines product-survey citations). Advanced cursor to M3, reset attempt to 0, status set to in_progress.
 - 2026-06-10 — generator ran on M2: wrote artifacts/2026-06-10-m2-priority-shortlist.md (4-criterion weighted rubric, 10-country ranked table, top 3 = Indonesia 3.60 / Egypt 3.50 / Philippines 3.40, program-presence check per top-3); status set to awaiting_review. Generator note: Pure Earth's LEAF-funded program (Q4 2024) already covers 7 of the obvious candidates at once, collapsing the whitespace of naive top picks — the high-burden giants (India, Nigeria, Pakistan) rank bottom-half because they're both hard to operate in and already saturated; the real opportunity is deepening attribution work, not first entry.
