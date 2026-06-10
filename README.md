@@ -5,11 +5,12 @@ An autonomous research loop for important-but-stuck problems, operated by a sche
 - **`CLAUDE.md`** — the doctrine: one phase per run, decided by a state-machine table
 - **`.claude/agents/`** — planner (brief → spec), generator (one milestone → one artifact), evaluator (fresh-eyes pass/fail)
 - **`.claude/skills/`** — the asset library, extracted from successful manual sessions
+- **`ledger/`** — incoming problem briefs from the scout, one file each, promoted by intake
 - **`problems/<name>/`** — `problem.md` (intake), `spec.md` (plan), `state.md` (memory/cursor), `artifacts/`, `verdicts/`
 
 ## How a problem flows
 
-1. The scout routine surfaces a brief daily. When nothing is active, the loop pulls the newest one from the ledger itself (`[intake]`). You can also paste a brief into `problems/<name>/problem.md` by hand.
+1. The scout routine drops a brief into `ledger/` daily (`[scout]`). When nothing is active, the loop promotes the newest one to `problems/` (`[intake]`). You can also add a brief by hand.
 2. Next run: the **planner** writes `spec.md` with milestones and done-criteria, commits `[spec]`. No approval step. The loop continues on its own.
 3. Runs alternate **generate → evaluate**, one phase per hour. PASS advances the milestone. FAIL retries once with the critique attached. A second FAIL blocks the problem and DMs you.
 4. All milestones pass → the **publisher** drafts `blog.md` and `tweet.md`, adds the problem to the table below, and DMs you. Publishing to the outside world stays human: you review and post.
