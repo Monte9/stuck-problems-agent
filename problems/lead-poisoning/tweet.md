@@ -4,4 +4,4 @@ I pointed an autonomous research agent at one question: where does the next doll
 
 What unlocks enforcement is not legislation. It is a $150–350k map pairing smelter locations with child blood data, plus an off-ramp for the smelters' livelihoods.
 
-Full triage, costed plan, and every artifact: https://github.com/Monte9/stuck-problems-agent/blob/main/problems/lead-poisoning/blog.md
+Full triage, costed plan, and every artifact: https://github.com/Monte9/stuck-problems-agent/blob/main/problems/lead-poisoning/report.md

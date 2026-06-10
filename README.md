@@ -12,12 +12,12 @@ An autonomous research loop for important-but-stuck problems, operated by a sche
 1. When nothing is active, the loop scouts a new stuck problem itself and writes the brief (`[scout]`). One problem at a time, in sequence. You can also add a brief by hand to `problems/<name>/problem.md`.
 2. Next run: the **planner** writes `spec.md` with milestones and done-criteria, commits `[spec]`. No approval step. The loop continues on its own.
 3. Runs alternate **generate → evaluate**, one phase per hour. PASS advances the milestone. FAIL retries once with the critique attached. A second FAIL blocks the problem and DMs you.
-4. All milestones pass → the **publisher** drafts `blog.md` and `tweet.md`, adds the problem to the table below, and DMs you. Publishing to the outside world stays human: you review and post.
+4. All milestones pass → the **publisher** drafts `report.md` and `tweet.md`, adds the problem to the table below, and DMs you. Publishing to the outside world stays human: you review and post.
 5. The problem is `published`; the next wake scouts a fresh one. The loop never idles.
 
 ## Your jobs (and nothing else)
 
-- **Post the publications** — when a DM says `[published]`, review `blog.md` and `tweet.md`, then post them.
+- **Post the publications** — when a DM says `[published]`, review `report.md` and `tweet.md`, then post them.
 - **Unblock** — when a commit says `[blocked]`, read the verdict, fix the spec/rubric/state, push.
 - **Weekly 15-minute audit** — the quality backstop now that no human reviews specs. Read two randomly chosen **PASS** artifacts. If one makes you wince, the fix goes into the evaluator rubric (versioned in `evaluator.md`). You're auditing the judge, not the work. Extract a SKILL.md when the log shows repeated freeform work.
 
@@ -27,4 +27,4 @@ Everything else runs without you. Watch the commit log: `[blocked]` needs you, `
 
 | Problem | Status | Result |
 |---------|--------|--------|
-| [lead-poisoning](problems/lead-poisoning/) | published | Indonesia's top-ranked target already bans informal battery smelting, yet ~5 licensed smelters coexist with 200+ illegal ones and 47% of children near Jakarta recyclers have elevated blood lead; the missing piece is a $150-350k enforcement map. [blog](problems/lead-poisoning/blog.md) · [final artifact](problems/lead-poisoning/artifacts/2026-06-10-m5-funder-brief.md) |
+| [lead-poisoning](problems/lead-poisoning/) | published | Indonesia's top-ranked target already bans informal battery smelting, yet ~5 licensed smelters coexist with 200+ illegal ones and 47% of children near Jakarta recyclers have elevated blood lead; the missing piece is a $150-350k enforcement map. [report](problems/lead-poisoning/report.md) · [final artifact](problems/lead-poisoning/artifacts/2026-06-10-m5-funder-brief.md) |

@@ -21,7 +21,7 @@ Read every `problems/*/state.md`. Pick the active problem: status not `published
 | 1 | No `spec.md` | Run the **planner** subagent → it writes `spec.md`. Set `status: in_progress`, `current_milestone: 1`. Commit `[spec]`. |
 | 2 | `status: in_progress` | Run the **generator** subagent on the current milestone. If `attempt > 0`, include the path to the latest FAIL verdict in its prompt. It writes one artifact to `artifacts/`. Set `status: awaiting_review`. |
 | 3 | `status: awaiting_review` | Run the **evaluator** subagent → it writes a verdict to `verdicts/`. Route on the verdict:<br>**PASS** → advance `current_milestone`, reset `attempt: 0`, set `status: in_progress` (or `complete` if it was the last milestone). Notify milestone done.<br>**FAIL** → increment `attempt`. If `attempt >= 2` → `status: blocked`, notify. Else `status: in_progress`. |
-| 4 | `status: complete` | Run the **publisher** subagent → it writes `blog.md` and `tweet.md` in the problem directory and adds the problem to the README's Problems table. Set `status: published`. Commit `[published]`, Slack DM the user (they post it; publishing to the outside world stays human). |
+| 4 | `status: complete` | Run the **publisher** subagent → it writes `report.md` and `tweet.md` in the problem directory and adds the problem to the README's Problems table. Set `status: published`. Commit `[published]`, Slack DM the user (they post it; publishing to the outside world stays human). |
 | 5 | No active problem (everything `published` or `blocked`) | Run the **scout** subagent → it researches one new stuck problem and writes `problems/<kebab-slug>/problem.md`. Create a fresh `state.md` (`status: no_spec`, milestone 0, empty run log). Commit `[scout]`. The next run plans it. |
 
 After the action: update `state.md` (status, cursor, attempt, run-log entry with today's date), then commit and push.
@@ -39,7 +39,7 @@ The commit message is the durable notification channel. Prefixes:
 - `[spec] <problem>: spec created (M1–M<N>)` — planner finished, loop continues on its own
 - `[blocked] <problem> M<N>: failed evaluation twice` — needs a human
 - `[milestone] <problem> M<N>: passed` — FYI, no action needed
-- `[published] <problem>: blog + tweet drafts ready` — the user reviews and posts; the loop moves on regardless
+- `[published] <problem>: report + tweet drafts ready` — the user reviews and posts; the loop moves on regardless
 - `[scout] <problem>: new problem sourced` — FYI, new problem entering the loop
 - `[run] <problem>: <one-line summary>` — everything else, including no-op wakes (no-op wakes don't commit; just report in run output)
 
