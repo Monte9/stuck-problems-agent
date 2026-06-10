@@ -9,15 +9,22 @@ An autonomous research loop for important-but-stuck problems, operated by a sche
 
 ## How a problem flows
 
-1. Scout routine surfaces a brief. Paste it into `problems/<name>/problem.md` and push.
+1. The scout routine surfaces a brief daily. When nothing is active, the loop pulls the newest one from the ledger itself (`[intake]`). You can also paste a brief into `problems/<name>/problem.md` by hand.
 2. Next run: the **planner** writes `spec.md` with milestones and done-criteria, commits `[spec]`. No approval step. The loop continues on its own.
-3. Runs alternate **generate → evaluate**, one phase every 4 hours. PASS advances the milestone. FAIL retries once with the critique attached. A second FAIL blocks the problem and DMs you.
-4. All milestones pass → `status: complete`. The final artifacts are the deliverable.
+3. Runs alternate **generate → evaluate**, one phase per hour. PASS advances the milestone. FAIL retries once with the critique attached. A second FAIL blocks the problem and DMs you.
+4. All milestones pass → the **publisher** drafts `blog.md` and `tweet.md`, adds the problem to the table below, and DMs you. Publishing to the outside world stays human: you review and post.
+5. The problem is `published`; the next wake starts intake on a fresh one. The loop never idles while the ledger has briefs.
 
 ## Your jobs (and nothing else)
 
+- **Post the publications** — when a DM says `[published]`, review `blog.md` and `tweet.md`, then post them.
 - **Unblock** — when a commit says `[blocked]`, read the verdict, fix the spec/rubric/state, push.
-- **Weekly 15-minute audit** — the quality backstop now that no human reviews specs. Read two randomly chosen **PASS** artifacts. If one makes you wince, the fix goes into the evaluator rubric (versioned in `evaluator.md`). You're auditing the judge, not the work.
-- **Extract skills** — when the log shows repeated freeform work, do it once by hand, extract a SKILL.md.
+- **Weekly 15-minute audit** — the quality backstop now that no human reviews specs. Read two randomly chosen **PASS** artifacts. If one makes you wince, the fix goes into the evaluator rubric (versioned in `evaluator.md`). You're auditing the judge, not the work. Extract a SKILL.md when the log shows repeated freeform work.
 
-Everything else runs without you. Watch the commit log: `[blocked]` needs you; `[spec]`, `[milestone]`, and `[run]` don't.
+Everything else runs without you. Watch the commit log: `[blocked]` needs you, `[published]` is your cue to post; the rest is the loop talking to itself.
+
+## Problems
+
+| Problem | Status | Result |
+|---------|--------|--------|
+| [lead-poisoning](problems/lead-poisoning/) | in progress | — |
