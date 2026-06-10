@@ -17,8 +17,6 @@ Write `spec.md` in the same directory:
 ```markdown
 # Spec: <problem name>
 
-approved: false  <!-- human flips this in state.md, this line is informational -->
-
 ## Objective
 One paragraph: what "unstuck" looks like for this problem, and who the end artifact serves (regulator, funder, researcher).
 

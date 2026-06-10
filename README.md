@@ -9,17 +9,15 @@ An autonomous research loop for important-but-stuck problems, operated by a sche
 
 ## How a problem flows
 
-1. Scout routine surfaces a brief → you paste it into `problems/<name>/problem.md`, push.
-2. Next run: **planner** writes `spec.md`, sets `awaiting_spec_approval`, halts. Runs keep waking and exiting until you act.
-3. **You approve** by editing one line in `state.md` — `spec_approved: false` → `true` — and pushing. This is the one human gate in the system.
-4. Runs alternate **generate → evaluate**, one phase per day. PASS advances the milestone; FAIL retries once with the critique attached; a second FAIL blocks the problem and pings you.
-5. All milestones pass → `status: complete`. The final artifacts are the deliverable.
+1. Scout routine surfaces a brief. Paste it into `problems/<name>/problem.md` and push.
+2. Next run: the **planner** writes `spec.md` with milestones and done-criteria, commits `[spec]`. No approval step. The loop continues on its own.
+3. Runs alternate **generate → evaluate**, one phase every 4 hours. PASS advances the milestone. FAIL retries once with the critique attached. A second FAIL blocks the problem and DMs you.
+4. All milestones pass → `status: complete`. The final artifacts are the deliverable.
 
 ## Your jobs (and nothing else)
 
-- **Approve specs** — a bad spec poisons every downstream run; this gate stays.
 - **Unblock** — when a commit says `[blocked]`, read the verdict, fix the spec/rubric/state, push.
-- **Weekly 15-minute audit** — read two randomly chosen **PASS** artifacts. If one makes you wince, the fix goes into the evaluator rubric (it's versioned in `evaluator.md`). You're auditing the judge, not the work.
+- **Weekly 15-minute audit** — the quality backstop now that no human reviews specs. Read two randomly chosen **PASS** artifacts. If one makes you wince, the fix goes into the evaluator rubric (versioned in `evaluator.md`). You're auditing the judge, not the work.
 - **Extract skills** — when the log shows repeated freeform work, do it once by hand, extract a SKILL.md.
 
-Everything else runs silent. Watch the commit log: `[needs-approval]` and `[blocked]` need you; `[milestone]` and `[run]` don't.
+Everything else runs without you. Watch the commit log: `[blocked]` needs you; `[spec]`, `[milestone]`, and `[run]` don't.

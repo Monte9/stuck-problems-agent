@@ -6,7 +6,7 @@ This repo is operated by a scheduled Claude Code routine. Each run executes **ex
 
 1. **Commit and push at the end of every run that changed any file.** Routine runs are ephemeral. Un-pushed state is lost, the next run starts from stale state, and the memory model of this whole system collapses. If `git push` fails, retry once with `git pull --rebase` first; if it still fails, end the run by stating loudly that state was NOT persisted.
 2. **One phase per run.** Plan, generate, or evaluate — never more than one. Small, cheap, reviewable runs are the design, not a limitation.
-3. **Never bypass the spec-approval gate.** If `spec.md` exists and `state.md` says `spec_approved: false`, exit without doing any work. The human approves by editing that one line and pushing. Keep waking up and exiting until they do.
+3. **Fully autonomous between exceptions.** No phase waits for human input. The only halt is `status: blocked` after two failed attempts on a milestone; a human clears it by editing state.md and pushing.
 4. **Two attempts max per milestone.** After a second FAIL verdict on the same milestone, set `status: blocked` and stop touching that problem. No infinite retry loops.
 5. **The evaluator gets fresh eyes.** Invoke it as a subagent whose prompt contains only: the milestone's done-criteria (quoted), the artifact path, and the verdict path to write. Never include generator reasoning, run history, or your own opinion of the artifact.
 6. **Only the orchestrator (you, the main loop) edits `state.md`.** Subagents never touch it.
@@ -18,10 +18,9 @@ Read every `problems/*/state.md`. Pick the active problem: status not `complete`
 | # | Condition | Action |
 |---|-----------|--------|
 | 0 | `problem.md` still contains the string `PLACEHOLDER` | Exit. No brief yet, nothing to do. |
-| 1 | No `spec.md` | Run the **planner** subagent → it writes `spec.md`. Set `status: awaiting_spec_approval`, `spec_approved: false`. Notify (see protocol). |
-| 2 | `spec.md` exists and `spec_approved: false` | Exit doing nothing. Do not re-plan, do not generate. |
-| 3 | `status: in_progress` | Run the **generator** subagent on the current milestone. If `attempt > 0`, include the path to the latest FAIL verdict in its prompt. It writes one artifact to `artifacts/`. Set `status: awaiting_review`. |
-| 4 | `status: awaiting_review` | Run the **evaluator** subagent → it writes a verdict to `verdicts/`. Route on the verdict:<br>**PASS** → advance `current_milestone`, reset `attempt: 0`, set `status: in_progress` (or `complete` if it was the last milestone). Notify milestone done.<br>**FAIL** → increment `attempt`. If `attempt >= 2` → `status: blocked`, notify. Else `status: in_progress`. |
+| 1 | No `spec.md` | Run the **planner** subagent → it writes `spec.md`. Set `status: in_progress`, `current_milestone: 1`. Commit `[spec]`. |
+| 2 | `status: in_progress` | Run the **generator** subagent on the current milestone. If `attempt > 0`, include the path to the latest FAIL verdict in its prompt. It writes one artifact to `artifacts/`. Set `status: awaiting_review`. |
+| 3 | `status: awaiting_review` | Run the **evaluator** subagent → it writes a verdict to `verdicts/`. Route on the verdict:<br>**PASS** → advance `current_milestone`, reset `attempt: 0`, set `status: in_progress` (or `complete` if it was the last milestone). Notify milestone done.<br>**FAIL** → increment `attempt`. If `attempt >= 2` → `status: blocked`, notify. Else `status: in_progress`. |
 
 After the action: update `state.md` (status, cursor, attempt, run-log entry with today's date), then commit and push.
 
@@ -35,12 +34,12 @@ After the action: update `state.md` (status, cursor, attempt, run-log entry with
 
 The commit message is the durable notification channel. Prefixes:
 
-- `[needs-approval] <problem>: spec ready for review` — planner finished, gate is closed
+- `[spec] <problem>: spec created (M1–M<N>)` — planner finished, loop continues on its own
 - `[blocked] <problem> M<N>: failed evaluation twice` — needs a human
 - `[milestone] <problem> M<N>: passed` — FYI, no action needed
 - `[run] <problem>: <one-line summary>` — everything else, including no-op wakes (no-op wakes don't commit; just report in run output)
 
-If a Slack tool is available in this run's environment, additionally send `[needs-approval]` and `[blocked]` messages as a DM to the user. If no Slack tool is available, skip silently — never fail a run over a notification.
+If a Slack tool is available in this run's environment, additionally send `[blocked]` messages as a DM to the user. Everything else stays in the commit log. If no Slack tool is available, skip silently — never fail a run over a notification.
 
 ## Skills
 
