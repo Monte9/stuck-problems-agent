@@ -12,19 +12,21 @@ Read everything in the problem directory: `problem.md`, `spec.md`, every file in
 
 ## Output — three files
 
-**1. `blog.md`** (800–1,500 words). Written for someone who has never heard of this repo and will never read it again unless this page earns it. It is a story about the problem, not about the process or the loop. Dense with data: every section carries exact figures from the artifacts. Structure:
+**1. `blog.md`** (900–1,500 words of body, plus tables and references). The reader is a domain expert or a funder, not a general audience. Write a tight research note, structured like a paper:
 
-- The problem in human terms: who is harmed, what it costs. Strongest numbers in the first three sentences.
-- Why it is stuck: the specific bottleneck, named and quantified. Not "complex challenges" but "only 34 of 137 countries have usable data".
-- Why now: the precedent that proves it is fixable (with its cost and result), what changed recently, and the opening that makes this the moment.
-- What the research found: the densest, most surprising findings. Lead with the insight that inverts the naive expectation. Exact figures, named countries, named actors.
-- What it takes: the concrete next actions, who could execute them, and rough costs anchored to cited comparators.
-- Open questions: what desk research cannot resolve. Honesty here is what makes the rest credible.
-- Provenance, one line at the end: this research was produced by an autonomous agent loop; sources and artifacts are in this repo.
+- **Title**: states the scope and the claim ("Where the next dollar against X should go: a 25-country triage"). Never a riddle, never clever-vague. An expert should know from the title alone whether to read on.
+- **Abstract**: one paragraph, 120–180 words. The question, the method in one clause, the two or three headline findings with their numbers, the recommendation with its cost.
+- **Background**: compress what experts already know into a few cited sentences. Do not re-teach the field its own burden numbers. Include the precedent that proves the problem is fixable, with its cost and result.
+- **Method**: one short paragraph. The stages, any scoring rubric with its weights, and the verification protocol (independent evaluator, citation spot-checks, pass record). Link the artifacts.
+- **Findings**: numbered subsections, each heading a one-line claim. Lead with the finding that inverts the naive expectation. Use markdown tables for rankings, scores, and anything with more than three numbers; prose hides data that tables reveal.
+- **Recommendations**: a costed table (item, executor, cost, anchor), then one paragraph of sequencing logic.
+- **Limitations**: numbered and specific. This section purchases the credibility of everything above it.
+- **References**: numbered list with URLs. Every inline citation resolves to an entry here.
+- **Provenance**: two sentences. Produced by an autonomous loop, how it was verified, where artifacts and verdicts live.
 
-No images.
+No images. At most one rhetorical flourish in the whole piece; if a sentence shows off, cut it.
 
-**2. `tweet.md`**: one tweet body, not a thread. The single most surprising concrete finding with its number, one line on why it matters, link to the blog/repo. No image.
+**2. `tweet.md`**: one tweet body, not a thread, with a four-beat arc: the stake (the problem's biggest impact number, first), the turn (the finding that inverts expectations), the resolution (the concrete cheap fix with its cost), the link. No image.
 
 **3. `README.md`**: add a row to the Problems table: problem name, one-line outcome with its strongest number, link to `blog.md` and the final artifact.
 
