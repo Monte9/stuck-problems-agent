@@ -1,15 +1,16 @@
 # State: cbt-insomnia-undertreatment
 
-status: awaiting_review
-current_milestone: 2
+status: in_progress
+current_milestone: 3
 attempt: 0
 
 ## Next action
 
-M2 artifact written (artifacts/2026-06-11-m2-digital-cbti-product-reimbursement-dossier.md). The next run matches decision table row 3: the evaluator subagent reviews the M2 artifact against the spec's done-criteria and writes a verdict to verdicts/.
+M2 passed. The next run matches decision table row 2: the generator subagent runs on M3 (deprescribing-and-substitution brief for older long-term hypnotic users) and writes one artifact to artifacts/.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-11 — evaluator ran on M2: PASS (verdicts/2026-06-11-m2-attempt0.md). All six rubric checks passed; spot-checked 3/3 citations (openFDA QVO query returns exactly the two cited clearances K191716/K233577; Freeman 2017 Lancet Psychiatry N=3,755, ISI −4.78, d=1.11 matches exactly; CY2025 CMS DMHT code details G0552 contractor-priced / G0553 ~$20.06 / 21 CFR 882.5801 confirmed). Minor non-blocking note: comparison table is transposed (products as columns) but contains every required field. Advanced cursor to M3, status in_progress.
 - 2026-06-11 — generator ran on M2: wrote artifacts/2026-06-11-m2-digital-cbti-product-reimbursement-dossier.md (head-to-head table for the only two FDA-cleared digital CBT-I devices per openFDA product-code QVO — Somryst K191716/2020, alive under Nox Health after Pear's bankruptcy and $3.9M asset sale, and SleepioRx K233577/2024-08-05; pivotal-trial effects d≈0.95–1.11, N up to 3,755; pricing: $899 Pear-era list and £45 NICE contract, current US prices marked not-found; CMS section on G0552–G0554 from the CY2025 PFS final rule, retained/expanded in CY2026, plus A9291's no-payment status); status set to awaiting_review. Generator notes: the often-cited "A9152/A9153" DMHT codes are actually vitamin codes (the real PDT supply code is A9291), and G0552's contractor-priced payment amount has no findable published MAC fee ~18 months after the codes went live — flagged as the strongest counter to the "Medicare now covers it" framing. A first generator invocation died on a transient API-overload error before writing anything; retried within the same run, attempt counter untouched (no FAIL verdict involved).
 - 2026-06-11 — evaluator ran on M1: PASS (verdicts/2026-06-11-m1-attempt0.md). Evaluator independently reproduced all three model components ($76.32M + $15.83M + $0.34M = $92.49M) and both sensitivity bounds ($16.7M / $146.1M) from stated inputs, and spot-checked 3 of 3 sources (RAND 2023, SleepioRx cost study, Treves 2018) successfully. Advanced cursor to M2, status in_progress.
 - 2026-06-11 — generator ran on M1: wrote artifacts/2026-06-11-m1-cost-of-inaction-baseline.md (21-row sourced summary table; three-component worked model giving ~$92M/year cost of inaction per 100,000 US adults, sensitivity range $17M–$146M; 6-point limitations section); status set to awaiting_review. Generator note: the widely cited Wickwire +$63,607/yr Medicare figure is an all-cause cost difference, not attributable cost — using it naively would inflate the model ~30-fold, so it was excluded with a note; also a 2026 national survey found only 3.5% of US adults have ever used CBT-I and only 15.1% recognize it, making awareness a quantified bottleneck alongside provider supply (~1 trained provider per 29,800 untreated patients).
