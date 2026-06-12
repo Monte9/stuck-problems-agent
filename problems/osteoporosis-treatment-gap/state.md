@@ -1,15 +1,16 @@
 # State: osteoporosis-treatment-gap
 
-status: in_progress
+status: awaiting_review
 current_milestone: 2
 attempt: 0
 
 ## Next action
 
-M1 passed (verdicts/2026-06-12-m1-attempt0.md). Next run matches decision table row 2: the generator writes the M2 benefit-harm dossier (Black NEJM 2020 arithmetic, NNT/NNH table, prescribing-collapse timeline, counterarguments, limitations) to artifacts/.
+M2 generated (artifacts/2026-06-12-m2-benefit-harm-dossier.md). Next run matches decision table row 3: the evaluator reads the artifact against M2's done-criteria and writes a verdict to verdicts/2026-06-12-m2-attempt0.md.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-12 — generator ran on M2: wrote artifacts/2026-06-12-m2-benefit-harm-dossier.md — benefit-harm dossier reproducing Black et al. NEJM 2020 ratio with the arithmetic shown (149 hip fx prevented vs 2 AFFs caused per 10,000 White women at 3 yr ≈ 75:1, ~271:1 for all clinical fx, stress-tested to ~4.6:1 for Asian women at 5 yr); NNT/NNH table (hip NNT 100, vertebral NNT 16, AFF NNH ~760–5,750 by duration, ONJ NNH ~10,000–100,000+); 6-point dated prescribing-collapse timeline using M1-defensible figures (Jha >50% decline 2008→2012, Solomon 40.2%→20.5%, Desai 9.8%→3.3%, no "15%→3%" soundbite); rebuttals to AFF/ONJ/long-duration + a 4th concern; 7 residual-risk caveats. Key finding: benefit-harm ratio worsens with duration (AFFs accumulate faster than hip fx prevented), so the duration concern has a real kernel — but the evidence-based answer is a drug holiday, not non-treatment, and AFF risk reverses fast on stopping (HR 0.52 within 3–15 mo) while hip protection persists, the asymmetry that makes time-limited treatment rational. Status set to awaiting_review.
 - 2026-06-12 — evaluator ran on M1: PASS (verdicts/2026-06-12-m1-attempt0.md) — all rubric checks and all 5 done-criteria met; 12 countries + 6 US systems/states with Kaiser Healthy Bones present, no blank definition/time-window cells, 7 comparability caveats, US decline row verified against Desai 2018 (9.8% 2004 → 3.3% 2015, 180-day window); 3/3 citation spot-checks confirmed (Desai 2018, Kim 2015, Healio/Kaiser). Advanced cursor to M2, status in_progress.
 - 2026-06-12 — generator ran on M1: wrote artifacts/2026-06-12-m1-treatment-rate-league-table.md — 19-row ranked league table, 12 countries (US, UK, Japan, South Korea, Australia, NZ, Taiwan, Germany, Spain, Canada, Sweden, Denmark) and 6 US systems/states (Kaiser SCAL Healthy Bones, Geisinger HiROC, VHA, Hawaii Pacific Health, Traditional Medicare, Medicare Advantage), every row cited with treatment definition + time window; US decline documented from peer-reviewed claims series (Desai 9.8% 2004 → 3.3% 2015 at 180 days; Solomon 40.2% 2002 → 20.5% 2011 at 12 months) — notably the advocacy "15%→3%" soundbite doesn't match the underlying series; counter-finding: national UK FLS rollout reaches only 35.4% vs flagship US programs' self-reported 68–80%, which should discipline M3's achievable-rate assumption. Status set to awaiting_review.
 - 2026-06-12 — planner ran: wrote spec.md with 4 milestones (M1 league table of post-fracture treatment rates across >=10 countries and >=5 US systems; M2 benefit-harm dossier inverting the atypical-femoral-fracture scare with the Black NEJM 2020 arithmetic and NNT/NNH table; M3 Medicare cost-of-the-gap model, ROS-style, with reproducible formulas and low/base/high sensitivity; M4 CMS PFS docket comment backing the coalition's G-code ask plus an NHS-style FLS business case template for US payers). All milestones freeform — skills library has no matching skill. Status set to in_progress, cursor at M1.
