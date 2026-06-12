@@ -1,15 +1,16 @@
 # State: osteoporosis-treatment-gap
 
-status: awaiting_review
-current_milestone: 1
+status: in_progress
+current_milestone: 2
 attempt: 0
 
 ## Next action
 
-M1 artifact exists (artifacts/2026-06-12-m1-treatment-rate-league-table.md). Next run matches decision table row 3: the evaluator judges it against the M1 done-criteria only and writes a verdict to verdicts/.
+M1 passed (verdicts/2026-06-12-m1-attempt0.md). Next run matches decision table row 2: the generator writes the M2 benefit-harm dossier (Black NEJM 2020 arithmetic, NNT/NNH table, prescribing-collapse timeline, counterarguments, limitations) to artifacts/.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-12 — evaluator ran on M1: PASS (verdicts/2026-06-12-m1-attempt0.md) — all rubric checks and all 5 done-criteria met; 12 countries + 6 US systems/states with Kaiser Healthy Bones present, no blank definition/time-window cells, 7 comparability caveats, US decline row verified against Desai 2018 (9.8% 2004 → 3.3% 2015, 180-day window); 3/3 citation spot-checks confirmed (Desai 2018, Kim 2015, Healio/Kaiser). Advanced cursor to M2, status in_progress.
 - 2026-06-12 — generator ran on M1: wrote artifacts/2026-06-12-m1-treatment-rate-league-table.md — 19-row ranked league table, 12 countries (US, UK, Japan, South Korea, Australia, NZ, Taiwan, Germany, Spain, Canada, Sweden, Denmark) and 6 US systems/states (Kaiser SCAL Healthy Bones, Geisinger HiROC, VHA, Hawaii Pacific Health, Traditional Medicare, Medicare Advantage), every row cited with treatment definition + time window; US decline documented from peer-reviewed claims series (Desai 9.8% 2004 → 3.3% 2015 at 180 days; Solomon 40.2% 2002 → 20.5% 2011 at 12 months) — notably the advocacy "15%→3%" soundbite doesn't match the underlying series; counter-finding: national UK FLS rollout reaches only 35.4% vs flagship US programs' self-reported 68–80%, which should discipline M3's achievable-rate assumption. Status set to awaiting_review.
 - 2026-06-12 — planner ran: wrote spec.md with 4 milestones (M1 league table of post-fracture treatment rates across >=10 countries and >=5 US systems; M2 benefit-harm dossier inverting the atypical-femoral-fracture scare with the Black NEJM 2020 arithmetic and NNT/NNH table; M3 Medicare cost-of-the-gap model, ROS-style, with reproducible formulas and low/base/high sensitivity; M4 CMS PFS docket comment backing the coalition's G-code ask plus an NHS-style FLS business case template for US payers). All milestones freeform — skills library has no matching skill. Status set to in_progress, cursor at M1.
 - 2026-06-12 — scout ran: sourced "the post-fracture osteoporosis treatment gap" (domain: demography — aging; ~2M US fragility fractures/yr heading to $95B/yr by 2040, 20–30% one-year mortality after hip fracture, yet <25% of fracture patients get the ~$50/yr generic that roughly halves refracture risk; the Fracture Liaison Service delivery model is proven cost-saving since Glasgow 1999 and certified in 59 countries; stuck on a fear-driven evidence inversion — the atypical-femoral-fracture scare halved bisphosphonate use against ~75:1 benefit-harm arithmetic — plus no specialty owning the post-discharge patient and no payer funding the coordinator; wedge: treatment-rate league table, Medicare deaths-and-dollars gap model, benefit-harm dossier, and the CMS docket / NHS-style business case that exists for England and nowhere else; live buyers mid-decision: CMS 2026 fee-schedule docket and NHS England's unplanned 2030 FLS pledge). Winner of a 5-candidate slate scored against PREFERENCES.md (9/10; runners-up: remittance fees 6/10, hearing loss→dementia 6/10, AF anticoagulation underuse 6/10, pig-butchering compounds 5/10 — disqualified as actively being solved). Brief written to problem.md; awaiting planner.
