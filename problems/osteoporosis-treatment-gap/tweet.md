@@ -1,0 +1,1 @@
+In Medicare, broken bones from osteoporosis cause more hospitalizations than heart attacks, strokes, or breast cancer. Yet only 21.1% of patients who break a bone get treated, even though bisphosphonates prevent ~75 hip fractures for every rare atypical fracture they cause. The fix is a $105–$182 care-coordination payment CMS hasn't created. Report: [link]
