@@ -1,0 +1,1 @@
+Osteoporotic fractures put more older Americans in the hospital than heart attacks, strokes, or breast cancer. Yet only 21% of Medicare patients get treated after one. Fracture liaison clinics hit 68-80%. The fix: one CMS billing code, ~$182/patient, ~3,600 refractures and ~900 deaths prevented a year. Full case: [link]
