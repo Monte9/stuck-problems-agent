@@ -1,13 +1,14 @@
 # State: hospital-charity-care-gap
 
-status: no_spec
-current_milestone: 0
+status: in_progress
+current_milestone: 1
 attempt: 0
 
 ## Next action
 
-Brief is written but there is no `spec.md` yet. The next run matches decision table row 1: the **planner** turns `problem.md` into a research spec with 3-6 milestones, each with explicit checkable done-criteria, then sets `status: in_progress`, `current_milestone: 1`.
+Spec is written. The next run matches decision table row 2 (`status: in_progress`): the **generator** executes M1 — build the scoring rubric (≥5 machine-checkable 501(r) criteria, each anchored to a source URL) and assemble a reproducible 25-40 hospital sample frame spanning ≥8 states plus ≥1 North Carolina contrast case — writing one artifact to `artifacts/`, then sets `status: awaiting_review`.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-23 — planner ran: turned problem.md into spec.md with 4 milestones mapping the brief's a/b/c/d wedge — M1 scoring rubric + 25-40 hospital sample frame (≥8 states, ≥1 NC contrast); M2 collect & score each FAP/Plain Language Summary against the rubric with a verbatim quote behind every score; M3 layer in Form 990 Schedule H charity-care-as-share-of-revenue ratios vs sample median (with a "not located" escape hatch for messy multi-hospital-system EINs); M4 fuse into the ranked named-hospital non-compliance/inaccessibility scorecard with a recomputable composite formula, traceable red flags, named-audience action notes (state AGs / IRS TE/GE / advocacy), and a ≥4-threat Limitations section conceding the FAP-text-vs-actual-practice gap. All milestones "none — freeform" (skills library empty). Status set in_progress, current_milestone 1; awaiting generator.
 - 2026-06-23 — scout ran: sourced "charity care that nonprofit hospitals are legally required to give but mostly don't" (category: economics and inequality — an uncovered roster slot). Human cost: ~$14B/yr wrongly billed for care that should be written off as charity, only ~29% of eligible patients actually receive assistance, against ~$220B in US medical debt. Half-known fix: presumptive eligibility (auto-screen against Medicaid/SNAP/WIC/homelessness instead of application-gating) — Dollar For models full coverage at a 0.7% revenue drop; North Carolina mandated it (Jan 2025 / Jan 2026). Stuck on inverted incentives + near-zero IRC 501(r) enforcement (IRS audited just 35 of ~2,900 hospital orgs in 2024) + deliberate application friction. Desk-research wedge: parse public FAPs + Plain Language Summaries + Form 990 Schedule H into a ranked hospital-by-hospital non-compliance/inaccessibility scorecard that state AGs and IRS TE/GE can act on. Winner of a 4-candidate slate scored against PREFERENCES.md (9/10; runners-up: unclaimed safety-net benefits 7/10 — "actually being solved" by Code for America/BDT; algorithmic gig-wage discrimination 6/10 — fix needs new law not grind; benefits cliffs/EMTRs 4/10 — honest conclusion is a decade of institutional reform). Brief written to problem.md; awaiting planner. Note: after this problem, the only uncovered roster category is Technology and society.
