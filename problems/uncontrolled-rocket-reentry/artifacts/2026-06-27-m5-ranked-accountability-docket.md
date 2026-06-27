@@ -5,7 +5,7 @@
 **Inputs (no new numbers introduced; every figure traces to these):**
 - **M3 — Per-reentry casualty risk and accountability attribution** (`artifacts/2026-06-26-m3-per-reentry-risk-and-attribution.md`). Source of every risk figure in the target list: per-family summed risk ΣE_a and share of fleet risk (M3 Table 2 §3b), per-launching-state share (§3a), per-operator share (§3c), count-exceeding-threshold, the fleet total ΣE_a = 0.2080, and the 77.8% threshold-exceedance share.
 - **M4 — Exported-risk overlay by country** (`artifacts/2026-06-27-m4-exported-risk-overlay-by-country.md`). Source of the over-exposed-states summary: the borne-exposure ranking E_c (§2), the generated-vs-borne comparison (§3), and the families/inclinations driving each city's exposure.
-- **M2 — Per-rocket-body classified inventory** (`artifacts/2026-06-26-m2-per-rocket-body-classified-inventory.md`). Source of the compliance-status signals: the controlled (status `D`/`DSO`) vs uncontrolled (`R`) labels per family, including the 13 controlled Falcon 9 second stages.
+- **M2 — Per-rocket-body classified inventory** (`artifacts/2026-06-26-m2-per-rocket-body-classified-inventory.md`). Source of the compliance-status signals: the controlled (status `D`/`DSO`) vs uncontrolled (`R`) labels per family, including the 12 controlled Falcon 9 second stages.
 - **M1 — Methodology and Source Register** (`artifacts/2026-06-26-m1-methodology-source-register.md`). The 1×10⁻⁴ (1-in-10,000) compliance threshold (NASA-STD-8719.14, adopted US/France/Japan/ESA) and the casualty-risk model behind every E_a.
 
 **Author:** generator routine | **Date:** 2026-06-27.
@@ -34,7 +34,7 @@ Top 20 families shown (these carry 0.1903 of the 0.2080 fleet total = **91.5% of
 |---:|---|---|---|---:|---:|---:|---|
 | 1 | **Soyuz (Blok-I)** | RU | RVSNR / VVKO(V) | **0.0396** | **19.0%** | 119 / 119 | **Non-compliant** — all uncontrolled; every body breaches threshold |
 | 2 | **CZ-3B** | CN | CASC | **0.0324** | **15.6%** | 53 / 53 | **Non-compliant** — all uncontrolled; every body breaches |
-| 3 | **Falcon 9** | US | SPX | **0.0193** | **9.3%** | 35 / 35 | **Demonstrated-capable, non-compliant in practice** — 13 controlled `D` bodies in M2 vs 35 uncontrolled (see §4) |
+| 3 | **Falcon 9** | US | SPX | **0.0193** | **9.3%** | 35 / 35 | **Demonstrated-capable, non-compliant in practice** — 12 controlled `D` bodies in M2 vs 35 uncontrolled (see §4) |
 | 4 | **CZ-2F** | CN | CALT | **0.0134** | **6.5%** | 14 / 14 | **Non-compliant** — all uncontrolled |
 | 5 | **H-IIA/B** | J | MHI | **0.0116** | **5.6%** | 15 / 15 | **Non-compliant** — all uncontrolled |
 | 6 | **CZ-2C** | CN | CASC | **0.0108** | **5.2%** | 20 / 20 | **Non-compliant** — all uncontrolled |
@@ -53,20 +53,20 @@ Top 20 families shown (these carry 0.1903 of the 0.2080 fleet total = **91.5% of
 | 19 | **CZ-5** | CN | CNSA | **0.0018** | **0.9%** | 2 / 2 | **Demonstrated-capable** — CZ-5 second stage appears as DSO (controlled) in M2; these 2 core stages uncontrolled |
 | 20 | **Ariane 5** | F | AE / AESP | **0.0018** | **0.9%** | 2 / 2 | **Demonstrated-capable, non-compliant in practice** — ESC stage disposed to Point Nemo/heliocentric (DSO) in M2; these 2 uncontrolled |
 
-**Remaining 34 families:** each ≤0.8% of fleet risk; together **0.0177 (8.5% of fleet risk)**. Notable entries (all M3 §3b): Yuanzheng YZ kick stage 0.8%, CZ-11 0.6%, Kuaizhou/KT 0.5% (1 of 27 breaches), Delta 0.5%, CZ-6 0.5%, Zhuque 0.5%, LVM3 0.4%, Falcon Heavy 0.4% (1 body; note 1 controlled Falcon Heavy in M2), Proton-M 0.3%, H3 0.3%, the Iranian/DPRK/KSLV families ≤0.3% each (mostly below threshold). The smallest ~20 families are sub-200 kg kick stages that largely fall below the 1-in-10,000 line (M3 §1c).
+**Remaining 34 families:** each ≤0.8% of fleet risk; together **0.0177 (8.5% of fleet risk)**. Notable entries (all M3 §3b): Yuanzheng YZ kick stage 0.8%, CZ-11 0.6%, Kuaizhou/KT 0.5% (1 of 27 breaches), Delta 0.5%, CZ-6 0.5%, Zhuque 0.5%, LVM3 0.4%, Falcon Heavy 0.4% (1 body; note 2 controlled Falcon Heavy in M2), Proton-M 0.3%, H3 0.3%, the Iranian/DPRK/KSLV families ≤0.3% each (mostly below threshold). The smallest ~20 families are sub-200 kg kick stages that largely fall below the 1-in-10,000 line (M3 §1c).
 
 ### 2b. What the ranking says for action
 
 - **The top 2 families alone (Soyuz Blok-I + CZ-3B) retire 34.6% of fleet risk** (19.0% + 15.6%), and **both are fully non-compliant — 172 stages, every one above threshold.** They are the highest-leverage targets and the hardest cases (no in-family controlled precedent).
-- **Falcon 9 (#3, 9.3%) is the highest-value *immediately-actionable* target**: the fix is already in routine use on the same hardware (13 controlled vs 35 uncontrolled in M2, §4). Closing Falcon 9 alone retires nearly a tenth of fleet risk with **zero new technology**.
+- **Falcon 9 (#3, 9.3%) is the highest-value *immediately-actionable* target**: the fix is already in routine use on the same hardware (12 controlled vs 35 uncontrolled in M2, §4). Closing Falcon 9 alone retires nearly a tenth of fleet risk with **zero new technology**.
 - **CZ-5B (#7) is the highest *per-body* priority**: 4 bodies, 4.6% of fleet risk, the single most-reported uncontrolled reentries of the decade, each at ~24× the threshold (M3 §3 note 5). Per-stage, it is the most dangerous object class in the ledger.
 - **Electron (#11) is a deliberate *non*-target**: 75 uncontrolled bodies but **0 above threshold** (M3 §3b) — high body-count, negligible per-body risk. A standard should not waste enforcement on it; this is the ranking distinguishing *mode* non-compliance from *consequential* risk.
 
 ### 2c. The compliant baseline (proof points, not targets)
 
 M2 lists **58 controlled bodies** (status `D`/`DSO`) that already meet the standard and carry no uncontrolled-reentry casualty risk — the existence proof that the fix works at scale:
-- **Falcon 9: 13 controlled second stages** (M2, e.g. NORAD 40391, 42690, 53366, 61732 — launch and reentry the same day, the signature of a deorbit burn).
-- **Falcon Heavy: 1 controlled** (NORAD 58050).
+- **Falcon 9: 12 controlled second stages** (M2, e.g. NORAD 40391, 42690, 53366, 61732 — launch and reentry the same day, the signature of a deorbit burn).
+- **Falcon Heavy: 2 controlled** (NORAD 58050 and 61508).
 - **DSO-disposed families:** Centaur, CZ-5 second stage, Ariane 5 ESC — disposed to graveyard / Point Nemo / heliocentric via active burn (M2 §classification, status `DSO`).
 
 These prove the target families are being asked to do something **already routine elsewhere in the fleet**, not something novel (§4).
@@ -97,7 +97,7 @@ This reproduces the published Global-South inequity: rocket bodies are **~3× mo
 
 **Controlled deorbit of an upper stage is not a research problem; it is the standard disposal mode for Falcon 9 — the #3 risk family in this very ledger.** After payload separation, the Falcon 9 second stage performs a controlled retrograde **deorbit burn** that targets a destructive reentry over a remote, pre-notified area of the South Pacific (Point Nemo region), with propellant passivation to prevent on-orbit explosion. SpaceX states this is the planned, nominal procedure: after the September 2024 Crew-9 launch, *"Falcon 9's second stage was disposed in the ocean as planned, but experienced an off-nominal deorbit burn … the second stage safely landed in the ocean, but outside of the targeted area"* ([SpaceX, 28 Sep 2024](https://x.com/SpaceX/status/1840245345118498987); coverage: [SpaceNews, 2024-09-29](https://spacenews.com/spacex-pauses-falcon-9-launches-after-upper-stage-deorbit-anomaly/); [Spaceflight Now, 2024-09-29](https://spaceflightnow.com/2024/09/29/spacex-grounds-its-falcon-rocket-fleet-after-upper-stage-misfire/)). That the *exception* — a burn landing outside the target box — grounded the fleet shows controlled disposal is the **expected baseline**, not a stretch goal.
 
-This is corroborated inside the ledger: **M2 records 13 controlled (status `D`) Falcon 9 second stages** alongside the 35 uncontrolled ones (M2 §"Controlled"). The same hardware, same operator, does both. The 35 uncontrolled Falcon 9 stages (mostly early high-energy / GTO missions) are therefore **uncontrolled by exception, not by incapacity** (M3 §3 note 3).
+This is corroborated inside the ledger: **M2 records 12 controlled (status `D`) Falcon 9 second stages** alongside the 35 uncontrolled ones (M2 §"Controlled"). The same hardware, same operator, does both. The 35 uncontrolled Falcon 9 stages (mostly early high-energy / GTO missions) are therefore **uncontrolled by exception, not by incapacity** (M3 §3 note 3).
 
 **Additional in-fleet proof points (M2, status `DSO`):** the **Centaur** upper stage, the **CZ-5 second stage**, and the **Ariane 5 ESC** stage are all disposed via an active burn to a graveyard / Point-Nemo / heliocentric trajectory (M2 §classification rule). So at least four families in the ledger already demonstrate controlled disposal. The standard being asked of Soyuz Blok-I, CZ-3B, CZ-2F and the rest is **a thing the fleet already does routinely**.
 
@@ -137,10 +137,12 @@ This is corroborated inside the ledger: **M2 records 13 controlled (status `D`) 
 
 - **M3 — Per-reentry casualty risk and accountability attribution** (this problem), `artifacts/2026-06-26-m3-per-reentry-risk-and-attribution.md`. — every risk figure in §1–§2: per-family ΣE_a and fleet-share (Table 2 §3b), per-state share (§3a), per-operator (§3c), 77.8% threshold-exceedance (§1c), fleet ΣE_a = 0.2080, CZ-5B highest-per-body note (§3).
 - **M4 — Exported-risk overlay by country** (this problem), `artifacts/2026-06-27-m4-exported-risk-overlay-by-country.md`. — §3 over-exposed states: borne exposure E_c (§2), generated-vs-borne (§3a/b), Global-South ~3× finding (§3c).
-- **M2 — Per-rocket-body classified inventory** (this problem), `artifacts/2026-06-26-m2-per-rocket-body-classified-inventory.md`. — §2/§4 compliance labels: 559 uncontrolled (`R`), 58 controlled (`D`/`DSO`) including 13 Falcon 9 + 1 Falcon Heavy controlled second stages; DSO disposal for Centaur / CZ-5 S2 / Ariane 5 ESC.
+- **M2 — Per-rocket-body classified inventory** (this problem), `artifacts/2026-06-26-m2-per-rocket-body-classified-inventory.md`. — §2/§4 compliance labels: 559 uncontrolled (`R`), 58 controlled (`D`/`DSO`) including 12 Falcon 9 + 2 Falcon Heavy controlled second stages; DSO disposal for Centaur / CZ-5 S2 / Ariane 5 ESC.
 - **M1 — Methodology and Source Register** (this problem), `artifacts/2026-06-26-m1-methodology-source-register.md`, §B–C. — the 1×10⁻⁴ threshold (NASA-STD-8719.14, adopted US/France/Japan/ESA) and the casualty-risk model.
 - SpaceX, post-Crew-9 second-stage disposal statement (28 Sep 2024). https://x.com/SpaceX/status/1840245345118498987. — Falcon 9 second stage "disposed in the ocean as planned" via a deorbit burn; the controlled-deorbit proof-of-concept is the nominal procedure.
 - SpaceNews, "SpaceX pauses Falcon 9 launches after upper stage deorbit anomaly" (2024-09-29). https://spacenews.com/spacex-pauses-falcon-9-launches-after-upper-stage-deorbit-anomaly/. — corroborates routine controlled deorbit; an off-nominal burn grounded the fleet (the exception proves the baseline).
 - Spaceflight Now, "SpaceX grounds its Falcon rocket fleet after upper stage misfire" (2024-09-29). https://spaceflightnow.com/2024/09/29/spacex-grounds-its-falcon-rocket-fleet-after-upper-stage-misfire/. — same event; targeted deorbit over remote ocean is the standard disposal.
 - Byers, M., Wright, E., Boley, A. "Unnecessary risks created by uncontrolled rocket reentries." *Nature Astronomy* 6, 1093–1097 (2022). DOI [10.1038/s41550-022-01718-8](https://doi.org/10.1038/s41550-022-01718-8); arXiv:2210.02188. — the Global-South ~3× inequity underlying §3 (via M4 §3c).
 - Pardini, C., Anselmo, L. *J. Space Safety Engineering* 11(2):181–191 (2024). https://www.sciencedirect.com/science/article/pii/S2468896724000077; CNR focus https://www.cnr.it/en/focus/074-60/casualty-risk-from-the-uncontrolled-reentry-of-rocket-bodies-and-satellites. — the published ~62% CN / ~18% RU / ~14% US casualty-risk split and ~84% threshold-exceedance (the M3 reconciliation comparator cited in §5).
+</content>
+</invoke>
