@@ -1,13 +1,14 @@
 # State: phantom-data-center-load
 
-status: no_spec
-current_milestone: 0
+status: in_progress
+current_milestone: 1
 attempt: 0
 
 ## Next action
 
-A fresh brief exists but there is no `spec.md` yet. The next run matches decision table row 1: the planner subagent turns `problem.md` into a research spec with 3-6 milestones and explicit checkable done-criteria, sets `status: in_progress`, `current_milestone: 1`, and commits `[spec]`.
+`spec.md` now exists (5 milestones, M1–M5). The next run matches decision table row 2 (`status: in_progress`): the generator subagent executes M1 ("Evidence base and method scaffold") on the spec, writing one artifact to `artifacts/`, and the orchestrator sets `status: awaiting_review`.
 
 ## Run log
 <!-- newest first, one line per run -->
+- 2026-06-27 — planner ran (decision table row 1 — no spec.md, no PLACEHOLDER). Wrote `spec.md`: a 5-milestone chain toward a defensible bottom-up reconciliation of announced vs. real US data-center load. M1 evidence base + phantom-category method scaffold (LBNL Queued Up, PJM/ERCOT large-load reports, PUC/IRP dockets, Sightline); M2 gross announced-load baseline by RTO (>=4, incl. PJM/ERCOT, with as-of dates/horizons); M3 phantom-fraction estimation per RTO as low/central/high, decomposed by category and anchored to cited benchmarks (LBNL withdrawal rates, Exelon 22%, CenterPoint 1->25 GW, Sightline 12 vs 5 GW); M4 implied over-build GW + ratepayer cost exposure $ with one fully worked recomputable calc; M5 decision-maker briefing + explicit falsifiability section. All Skill fields "none — freeform" (only README.md in .claude/skills/). Every done-criterion phrased near-binary (counts, recomputable arithmetic, named-source anchors, required sections). Set status: in_progress, current_milestone: 1. Next run generates M1.
 - 2026-06-27 — scout ran (decision table row 5 — all problems published/dropped). Sourced **phantom-data-center-load** ("how much of the AI grid crisis is real?") as the next problem: a frontier (AI/energy) + welfare teardown — the first teardown shape in the repo, breaking the published overdue-fix/welfare-health monoculture. Inversion: the "AI will break the grid" panic driving tens of billions in capex and 8-19% rate hikes may be substantially phantom (Exelon says only 22% of its 65-GW pipeline through 2040 is likely real; CenterPoint's requests jumped 1→25 GW in a year; LBNL Queued Up shows only 13% of 2000-2019 generation requests ever reached operation). Wedge: a bottom-up reconciliation of announced vs. real data-center load (LBNL queue data + RTO large-load reports + state IRP/PUC filings, cross-matched for duplicate/site-control-less/double-counted projects) yielding a defensible phantom-fraction range by RTO with implied over-build (GW) and ratepayer cost exposure. Named decision: FERC's 2026 hand-off of large-load interconnection rules to each RTO + state PUC cost-allocation dockets, live now. Slate (3 frontier, 1 frontier-energy, 1 welfare; shapes teardown/measurement/forecast/dossier) scored in the [scout] commit body. Created this fresh state.md (status: no_spec, milestone 0). Next run plans it.
