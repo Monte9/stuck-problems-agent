@@ -1,0 +1,1 @@
+US utilities say AI is breaking the grid—PJM's capacity bill jumped $2.2B→$16.4B. But ~43% of announced data-center load is phantom: ~165 GW of over-build against load that won't show. Fix costs $0: make RTOs publish site control + signed offtake before billing ratepayers.
